@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var 나이 = 30;
+        var 경력 = 10;
+        var 성별 = '남자'
+
+        // 알바1번
+        // 성인이면서 남자면 합격
+        var 알바1번합격여부 = 나이 >= 20 && 성별 === '남자';
+        console.log(`알바 1번 합격여부 : ${알바1번합격여부}`)
+
+        // 알바2번
+        // 경력이 5년 이상이면 합격
+        var 알바2번합격여부 = 경력 >= 5;
+        console.log(`알바 1번 합격여부 : ${알바2번합격여부}`)
+
+        // 알바3번
+        // 경력이 5년 이상이거나 성인 남성이면 합격
+        var 알바3번합격여부 = 경력 >= 5 || (나이 >= 20 && 성별 === '남자')
+        console.log(`알바 1번 합격여부 : ${알바3번합격여부}`)
+
+    </script>
+</body>
+
+</html>
