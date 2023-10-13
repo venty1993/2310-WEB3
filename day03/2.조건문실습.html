@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        나이에 따라 버스요금을 다르게 받아야한다.
+        0세~6세 : 영유아, 무료
+        7세~13세 : 어린이, 700원
+        14세~19세 : 청소년, 1100원
+        20세~64세 : 성인, 1450원
+        65세~100세 : 노인, 1200원
+        100세~ : 인간문화재, 무료
+
+        나이에 따라 콘솔에 분류와 가격을 출력하도록 만들어주세요
+        ex) 31세일때 -> 31세는 성인입니다. 요금은 1450원입니다.
+     -->
+    <script>
+        var 나이 = 1;
+
+        if (나이 <= 6) {
+            console.log(`${나이}세는 영유아입니다. 요금은 0원 입니다.`)
+        } else if (나이 <= 13) {
+            console.log(`${나이}세는 어린이입니다. 요금은 700원 입니다.`)
+        } else if (나이 <= 19) {
+            console.log(`${나이}세는 청소년입니다. 요금은 1100원 입니다.`)
+        } else if (나이 <= 64) {
+            console.log(`${나이}세는 성인입니다. 요금은 1450원 입니다.`)
+        } else if (나이 <= 100) {
+            console.log(`${나이}세는'노인입니다. 요금은 1200원 입니다.`)
+        } else {
+            console.log(`${나이}세는'인간문화재입니다. 요금은 0원 입니다.`)
+        }
+    </script>
+</body>
+
+</html>

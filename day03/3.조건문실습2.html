@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        여러분은 복숭아 농장의 주인입니다.
+        수확철이 다가와 복숭아를 담을 바구니를 구매해야합니다.
+        한 바구니에는 복숭아를 10개 담을 수 있습니다.
+        복숭아 갯수에 따라 필요한 바구니의 갯수가 몇개인지 구해봅시다.
+
+        출력은 콘솔에
+        ex) 59개의 복숭아를 담기위해선 6개의 바구니가 필요합니다
+        형태로 해주세요!
+
+        풀이 과정중 소수점 내림이 필요합니다.
+        Math.floor(10.1) => 10
+        Math.floor(99.5) => 99
+        소수점을 절삭해주는 위 기능을 이용해서 작성해주세요.
+     -->
+
+    <script>
+        var 복숭아 = 50;
+        var 바구니 = Math.floor(복숭아 / 10);
+
+        if (복숭아 % 10 !== 0) {
+            바구니 = 바구니 + 1;
+        }
+
+        console.log(`${복숭아}개의 복숭아를 담기위해선 ${바구니}개의 바구니가 필요합니다`)
+    </script>
+</body>
+
+</html>

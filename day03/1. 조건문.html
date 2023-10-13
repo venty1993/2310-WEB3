@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // if (조건식) {
+        // 조건식의 결과값이 True일때 이 부분을 실행한다.
+        // 실행할부분;
+        // }
+
+        var 숫자 = 10.5;
+
+        // 숫자가 짝수일때 콘솔에 "숫자는 짝수입니다" 라고 출력
+        if (숫자 % 2 === 0) {
+            console.log(`숫자 ${숫자}은(는) 짝수입니다.`)
+        }
+
+        if (숫자 % 2 === 1) {
+            console.log(`숫자 ${숫자}은(는) 홀수입니다.`)
+        }
+
+
+
+        // 조건이 참일때와 거짓일때 각각 다르게 실행해야할때
+        if (숫자 % 2 === 0) {
+            console.log(`숫자 ${숫자}은(는) 짝수입니다.`)
+        } else {
+            console.log(`숫자 ${숫자}은(는) 홀수입니다.`)
+        }
+        // else 뒤에는 조건이 따로 붙지 않는다.
+        // if의 조건이 맞지않으면 무조건 else를 실행한다.
+
+        if (숫자 % 2 === 0) {
+            console.log(`숫자 ${숫자}은(는) 짝수입니다.`)
+        } else if (숫자 % 2 === 1) {
+            console.log(`숫자 ${숫자}은(는) 홀수입니다.`)
+        } else {
+            console.log(`숫자 ${숫자}은(는) 정수가 아니예요`)
+        }
+
+
+    </script>
+</body>
+
+</html>
