@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = 0;
+
+        number = number + 10; //1
+        number = number + 10; //2
+        number = number + 10; //3
+        number = number + 10; //4
+        number = number + 10; //5
+        number = number + 10; //6
+        number = number + 10; //7 
+        number = number + 10; //8
+
+        console.log(number);
+
+        //number2에 반복횟수 10000번, 매번 10을 더해주는 작성
+
+        let number2 = 0;
+
+        // 반복(10000) {
+        //     number2 = number2 + 10;
+        // }
+
+        // 개념은 위와 동일한데..
+        // 반복횟수 설정이 조금 복잡하다.
+        // 시작값과 종료값
+
+        for (let index = 0; index < 10000; index++) {
+            number2 = number2 + 10;
+        }
+
+        console.log(number2)
+
+
+        // for(시작값선언,조건식,증감식){
+        //  반복영역;
+        //}
+
+        for (let i = 0; i < 10; i++) {
+            console.log(i);
+        }
+
+
+
+
+
+
+
+
+        // 반복문시작!
+
+        let i = 0;
+
+        if (i < 5) { // i는 0, 조건식 참
+            console.log(i); // 콘솔에 0출력
+            i++; // i는 1이됨
+        }
+
+        if (i < 5) { // i는 1, 조건식 참
+            console.log(i); // 콘솔에 1출력
+            i++; // i는 2이됨
+        }
+
+        if (i < 5) { // i는 2, 조건식 참
+            console.log(i); // 콘솔에 2출력
+            i++; // i는 3이됨
+        }
+
+        if (i < 5) { // i는 3, 조건식 참
+            console.log(i); // 콘솔에 3출력
+            i++; // i는 4이됨
+        }
+
+        if (i < 5) { // i는 4, 조건식 참
+            console.log(i); // 콘솔에 4출력
+            i++; // i는 5이됨
+        }
+
+        if (i < 5) { // i는 5, 조건식 거짓
+            console.log(i); // 실행x
+            i++; // 실행x
+        }
+
+        // 반복문종료!
+
+
+        const 등장인물 = ['스펀지밥', '뚱이', '다람이', '징징이', '집게사장']
+
+        console.log(등장인물[0]);
+        console.log(등장인물[1]);
+        console.log(등장인물[2]);
+        console.log(등장인물[3]);
+        console.log(등장인물[4]);
+
+        for (let i = 0; i < 5; i++) {
+            console.log(등장인물[i]);
+        }
+    </script>
+</body>
+
+</html>

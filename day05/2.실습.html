@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    문제1. 0부터 100까지 더한값을 콘솔에 출력하는 반복문 작성.
+    콘솔에는 더해진값 하나만 출력되면 됩니다.
+
+    문제2. 구구단 7단을 콘솔에 출력하기 (1단~9단까지)
+
+    <script>
+        // 화이팅!
+
+        // 1
+
+        let 합계 = 0;
+
+        for (let i = 0; i <= 100; i++) {
+            합계 = 합계 + i
+        }
+
+        console.log(합계);
+
+        // 2.
+
+        console.log(`7 x 1 = 7`)
+        console.log(`7 x 2 = 14`)
+        console.log(`7 x 3 = 21`)
+        console.log(`7 x 4 = 28`)
+        console.log(`7 x 5 = 35`)
+        console.log(`7 x 6 = 42`)
+        console.log(`7 x 7 = 49`)
+        console.log(`7 x 8 = 56`)
+        console.log(`7 x 9 = 63`)
+
+        console.log('next');
+
+        for (let i = 1; i < 10; i++) {
+            console.log(`7 x ${i} = ${i * 7}`)
+        }
+
+    </script>
+</body>
+
+</html>
