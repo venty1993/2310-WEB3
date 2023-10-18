@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  -->
+
+    <script>
+        for (let i = 1; i < 10; i++) {
+            console.log(`2 x ${i} = ${i * 2}`)
+        }
+        for (let i = 1; i < 10; i++) {
+            console.log(`3 x ${i} = ${i * 3}`)
+        }
+
+        // 
+        // 
+        //  
+        for (let i = 1; i < 10; i++) {
+            console.log(`9 x ${i} = ${i * 9}`)
+        }
+
+        // 2중 반복문에서 let i를 동시에 사용할수 없다.
+        // 인덱스는 i -> j -> k 순서로 사용하는게 일반적이다.
+
+
+        for (let j = 2; j < 10; j++) {
+            for (let i = 1; i < 10; i++) {
+                console.log(`${j} x ${i} = ${i * j}`)
+            }
+        }
+    </script>
+</body>
+
+</html>

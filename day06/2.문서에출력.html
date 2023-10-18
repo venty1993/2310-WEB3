@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log()
+
+        // C:\Users\admin\Desktop 를 자바스크립트 식으로 쓰면
+        // C.Users.admin.Desktop
+
+        // Desktop만 쓰는 경우도 있다.
+        // 왜냐하면, 자주 쓰는 경로이기 때문에
+
+        window.console.log('ㅎㅇㅎㅇ')
+
+        // window는 운영체제를 뜻하는게 아니라, 브라우저를 뜻한다.
+
+        console.log(window.document.body);
+
+        // document는 굉장히 많이 쓰이기떄문에 window는 생략한다.
+        // 수많은 함수가 있지만 지금은 문서에 출력하는 함수만 배워볼것.
+
+        document.write('<p>')
+        document.write('안녕하세요')
+        document.write('</p>')
+
+        // 위 예제를 베이스로 p태그 안에 안녕하세요를 10개 넣으려면?
+
+        document.write('<p>')
+        for (let i = 0; i < 10; i++) {
+            document.write('안녕하세요')
+        }
+        document.write('</p>')
+
+
+
+
+    </script>
+</body>
+
+</html>
