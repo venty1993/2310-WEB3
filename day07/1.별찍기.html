@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 반복문 예제로 가장 많이 활용되는 별찍기 연습 -->
+    <!-- 
+    * * * * *
+    * * * * *
+    * * * * *
+    * * * * *
+    * * * * * 
+-->
+
+    <script>
+        
+        function star(){
+            document.write('&nbsp;*&nbsp;');
+        }
+
+        function enter(){
+            document.write('<br>');
+        }
+        function empty() {
+            document.write('&nbsp;&nbsp;&nbsp;')
+        }
+
+        function hr(){
+            document.write('<hr>')
+        }
+
+        star();star();star();star();star();
+        enter();
+
+        star();star();star();star();star();
+        enter();
+
+        star();star();star();star();star();
+        enter();
+
+        star();star();star();star();star();
+        enter();
+
+        star();star();star();star();star();
+        enter();
+
+        // (star();*5;enter());*5
+
+        hr();
+
+        for(let i = 0 ; i < 5 ; i ++) {
+            for(let starCount=0; starCount<5; starCount ++) {
+                star();
+            }
+            enter();
+        }
+
+
+        hr();
+        star();
+        enter();
+
+        star();star();
+        enter();
+
+        star();star();star();
+        enter();
+
+        star();star();star();star();
+        enter();
+
+        star();star();star();star();star();
+        enter();
+
+        hr();
+
+        for(let i = 0 ; i < 5 ; i ++) {
+            for(let starCount=0; starCount<i+1; starCount ++) {
+                star();
+            }
+            enter();
+        }  
+
+        hr();
+
+        star();star();star();star();star();
+        enter();
+        star();star();star();star();
+        enter();
+        star();star();star();
+        enter();
+        star();star();
+        enter();
+        star();
+        enter();
+
+        hr();
+
+        for(let i = 0 ; i < 5 ; i ++) {
+            for(let starCount=0; starCount< 5-i  ; starCount ++) {
+                star();
+            }
+            enter();
+        }  
+
+        hr();
+
+        
+        empty();empty();empty();empty();     star();
+
+        enter();
+
+        empty();empty();empty();      star();star();
+
+        enter();
+
+        empty();empty();        star();star();star();
+        enter();
+
+        empty();         star();star();star();star();
+        enter();
+
+                  star();star();star();star();star();
+        enter();
+        
+        // i = 0 , empty = 4(4-i) star = 1(i+1)
+        // i = 1 , empty = 3(4-i) star = 2(i+1)
+        // i = 2 , empty = 2(4-i) star = 3(i+1)
+        // i = 3 , empty = 1(4-i) star = 4(i+1)
+        // i = 4 , empty = 0(4-i) star = 5(i+1)
+
+        for(let i = 0 ; i < 5 ; i ++) {
+
+            for(let emptyCount=0; emptyCount<4-i; emptyCount ++) {
+                empty();
+            }
+
+            for(let starCount=0; starCount<i+1; starCount ++) {
+                star();
+            }
+            enter();
+        }  
+
+
+
+        // 이 작성을 반복문으로 줄여봅시다.
+        // 2중반복문을 이용해야하고 star와 enter는 반복문 내에 딱 한번씩만 작성되면 됩니다.
+        
+
+
+
+    </script>
+</body>
+</html>
