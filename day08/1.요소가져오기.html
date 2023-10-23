@@ -59,10 +59,52 @@
         // 이 형태로 개체 안의 값을 가져올수도 있고,
         // 56줄처럼 직접 값을 넣을수도 있다.
 
-        
+        // Q. 상수 '여러개선택' 안에 있는 모든 개체의 텍스트를
+        // '안녕히가세요' 로 바꿔주세요.
+        // 반복문과 innerText를 이용해 만들어주시면 됩니다!        
+        for(let i = 0 ; i < 여러개선택.length  ; i ++) {
+            여러개선택[i].innerText = "안녕히가세요"
+        }
 
-        
+
+
+
+        //document.getElementById() // 단수
+        // 아이디에 해당하는 개체 하나만 가져온다.
+
+        //document.getElementsByClassName() //복수
+        // 해당 클래스에 해당되는 모든 개체를 가져온다.
+        // 배열 형태로 가져옴
+
+        //document.getElementsByTagName() //복수
+        // 해당 태그에 해당되는 모든 개체를 가져온다.
+        // 배열 형태로 가져옴
+
+
+
+        // 그러면 아래 두개는 동일한것인가?
+        document.getElementsByClassName('hi')
+        document.querySelectorAll('.hi')
+
+        // 쿼리셀렉터는 선택자로 가져오기때문에 앞에 .이 붙어야한다.
+        // 아이디는 #, 태그는 아무것도 붙지 않는다.
+        // 반면 getElement(s)By ~~~ 형태는 선택자가 아니기때문에
+        // ., #등이 붙지 않는다.
+
+        //getElementsClassName 방식은 "지금 해당 클래스를 가지고 있는 개체"
+        //querySlectorAll 방식은 "불러온 시점에 클래스를 가지고있던 개체"
+
+        const getElements클래스 = document.getElementsByClassName('hi');
+        const querySelector클래스 = document.querySelectorAll('.hi');
+
+        // 위 선언 이후 div.hi 개체중 한 개체에서 hi라는 클래스가 빠졌을떄
+        // getElements방식 : 하나가 제외되어 3개가 되미
+            // [div.hi, div.hi, div.hi]
+        // querySelector방식 : 제외되지 않음 
+            // [div.hi, div, div.hi, div.hi]
+
+
     </script>
-
+    
 </body>
 </html>
