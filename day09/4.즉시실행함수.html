@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hello">안녕하십니까?</div>
+    <div class="bye">안녕히가십시오</div>
+    <script>
+        const hello = document.querySelector('.hello');
+
+        hello.addEventListener('click',안녕기능)
+
+        function 안녕기능(){
+            alert('안녕');
+        }
+
+        //이런 작성은 불필요한부분이 많아 피로도를 유발한다.
+        //안녕기능()이란 함수를 다른곳에서 사용할 계획이 없다면?
+        // 오로지 hello를 클릭했을때만 실행할 기능이라면
+
+        const bye = document.querySelector('.bye');
+        bye.addEventListener('click',()=>{
+            alert('잘가');
+        })
+
+        // ` function() {} `   대신에  ` () => {} ` 로 작성 할 수 있다.
+        // 약간의 차이가 있지만 지금은 신경쓰지 않아도 괜찮다.
+        // ()=>{} 쪽이 더 최신문법이다.
+        // 명칭은 화살표함수이다.
+
+    </script>
+</body>
+</html>

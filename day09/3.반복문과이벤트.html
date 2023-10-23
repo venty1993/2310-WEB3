@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert-button">1</div>
+    <div class="alert-button">2</div>
+    <div class="alert-button">3</div>
+    <div class="alert-button">4</div>
+    <div class="alert-button">5</div>
+    <div class="alert-button">6</div>
+    <div class="alert-button">7</div>
+    <div class="alert-button">8</div>
+    <div class="alert-button">9</div>
+    <div class="alert-button">10</div>
+
+    <!-- div.alert-button{$}*10 -->
+
+    <script>
+        const alertButton = document.getElementsByClassName('alert-button');
+        for(let i = 0 ; i < alertButton.length ; i ++) {
+            alertButton[i].addEventListener('click',function(){
+                alert(`이 버튼은 ${i+1}번 버튼입니다!`)
+            });
+        }
+    </script>
+</body>
+</html>

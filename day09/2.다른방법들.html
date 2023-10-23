@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    이벤트를 처리할수있는 방법은 여러가지가 있는데,
+    가장 많이 사용하는 방식이 day09/1번에 있는 이벤트 리스너이다.
+
+    이벤트 리스너를 사용하지 않고 이벤트를 처리할 수 있는 두가지 방법
+
+    1. html에서 onclick 이용하기
+
+    <button onclick="알림출력()">html에서 온클릭</button>
+    이 방법의 가장 큰 단점은 보안성이 취약하다는것이다.
+    onclick 속성에서 함수를 호출하려면 함수가 공개(전역)되어있는 상태여야 한다.
+
+
+
+    2. js에서 onclick 이용하기
+
+    <button class="js알림버튼">js에서 온클릭</button>
+    1번 방법보다는 보안성이 좋다.
+    하지만 onclick은 프로퍼티이다.
+    프로퍼티에는 하나의 값만 들어갈 수 있기때문에
+    동일한 이벤트에 여러개의 기능을 연결 할 수 없다.
+    물론 방법은 있으나, 이미 js로 가져온 컨텐츠라면 이벤트리스너를 안 쓸 이유가 없다.
+
+
+    <script>
+        
+        //html에서 onclick으로 함수를 실행하면 함수가 공개되어있어야한다. 
+        function 알림출력(){
+            alert('이것은 알림입니다');
+        }
+        
+        
+        // 콘솔에서는 내부함수에 접근할수없다.
+
+        외부의공개된함수()
+
+        function 외부의공개된함수() {
+
+            const jsButton = document.querySelector('.js알림버튼');
+
+            // onclick을 중복선언하면 덮어쓰기되어 기존값은 사라진다.
+            jsButton.onclick = 내부의비밀스러운함수;
+            jsButton.onclick = 내부의또다른함수;
+
+            // 실행하고자 하는 함수를 모두 담은 또다른 함수를 만들면 실행 가능하긴 함
+            jsButton.onclick = function(){
+                내부의비밀스러운함수();
+                내부의또다른함수();
+            }
+
+            function 내부의비밀스러운함수(){
+                alert('이것은 비밀스러운 알림입니다');
+            }
+
+            function 내부의또다른함수(){
+                alert('이것은 내부의 두번째 알림입니다.')
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>
