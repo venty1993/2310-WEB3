@@ -23,8 +23,24 @@
 
 
         for(let i = 0 ; i <기회 ; i ++) {
-            const 입력 = Number(prompt(`숫자를 입력해주세요! (1~${범위}) 남은기회 : ${ 기회 - i }`));
-            console.log(입력);
+
+            //while문을 통한 예외처리 포함
+            let 입력;
+            while(true){
+                입력 = Number(prompt(`숫자를 입력해주세요! (1~${범위}) 남은기회 : ${ 기회 - i }`));
+
+                if(입력===NaN) {
+                    alert('숫자를 입력해주세요')
+                }else{
+                    if( 입력 >=1 && 입력 <=범위){
+                        break;
+                    }
+                    else {
+                        alert(`1부터 ${범위}까지의 숫자를 입력해주세요.`)
+                    }
+                }
+            }
+
             if(입력 === 정답) {
                 alert('정답입니다!');
                 break;
