@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1. 출력
+        alert(`출력할 메세지와 출력할 ${코드}`)
+
+        2. 입력
+        const 입력받기 = prompt(`출력할 메세지와 출력할 ${코드}`)
+        입력할수 있는 입력칸이 함께 제공된다.
+        '입력받기' 라는 상수에 propmt에 입력한 값이 대입된다.
+
+        3. 입력받은 값 변환
+        prompt로 입력받은 값은 '문자열' 입니다.
+        입력받은값을 숫자로 쓰기위해선 숫자로 변환하는 과정을 거쳐야합니다.
+
+        Ex) 
+        const 문자숫자 = '1';
+        const 그냥숫자 = Number(문자숫자)
+
+        그냥숫자 에는 숫자 1이 대입된다.
+
+     -->
+     <script>
+        // 4. 난수생성
+
+        Math.random()
+        // 0 이상 1 미만의 난수를 생성(반환)
+        // 0 ~ 0.999999999......까지 나올수있다.
+    
+        Math.random() * 10
+        // 0 이상 10 미만
+        // 0~9.999999999999....
+
+        Math.floor( Math.random() * 10 )
+        // Math.floor() : 전달받은 인수의 소숫점을 버려준다.
+        // 0 이상 10 미만, 소수점 절삭
+        // 0 ~ 9
+     
+        Math.floor( Math.random() * 10 ) + 1
+        // 1~10
+
+
+        const 범위 = 10;
+        const 시작 = 5;
+
+        Math.floor(Math.random() * 범위) + 시작
+        // 5~14 숫자 중 랜덤한 정수를 생성해준다.
+
+
+
+
+
+        // 5. 반복문 중지
+        for(let i = 0 ; i < 10 ; i ++) {
+            console.log(i);
+
+            if(i===5) {
+                //break를 만나면 즉시 반복문이 종료된다.
+                break;
+            }
+        }
+     </script>
+</body>
+</html>
