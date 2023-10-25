@@ -78,7 +78,38 @@
         .arrow-container > .next {
             right: 0;
         }
+
+        .page-container {
+            position: absolute;
+            right: 8px;
+            bottom: 8px;
+            padding: 4px;
+            background-color: #00000080;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .slider-radio-button-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 8px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .slider-radio-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .slider-radio-button.active {
+            background-color: #343434;
+        }
     </style>
+
 </head>
 <body>
     <div class="slider">
@@ -98,7 +129,7 @@
                 <span class="total-page">3</span>
             </div>
             <ul class="slider-radio-button-container">
-                <li class="slider-radio-button"></li>
+                <li class="slider-radio-button active"></li>
                 <li class="slider-radio-button"></li>
                 <li class="slider-radio-button"></li>
             </ul>
