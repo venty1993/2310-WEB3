@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .slider {
+            width: 300px;
+            height: 200px;
+
+            border: 1px solid red;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .contents-wrapper {
+            display: flex;
+        }
+
+        .contents {
+            width: 300px;
+            height: 200px;
+            flex-shrink: 0;
+        }
+
+        .contents:nth-child(1){
+            background-color:pink
+        }
+
+        .contents:nth-child(2){
+            background-color:chocolate
+        }
+
+        .contents:nth-child(3){
+            background-color:steelblue
+        }
+
+
+        .controls {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .arrow-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .arrow-container > button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            
+        }
+
+        .arrow-container > .prev {
+            left: 0;
+        }
+
+        .arrow-container > .next {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <ul class="contents-wrapper">
+            <li class="contents"></li>
+            <li class="contents"></li>
+            <li class="contents"></li>
+        </ul>
+        <div class="controls">
+            <div class="arrow-container">
+                <button class="prev">◀</button>
+                <button class="next">▶</button>
+            </div>
+            <div class="page-container">
+                <span class="now-page">1</span>
+                /
+                <span class="total-page">3</span>
+            </div>
+            <ul class="slider-radio-button-container">
+                <li class="slider-radio-button"></li>
+                <li class="slider-radio-button"></li>
+                <li class="slider-radio-button"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
