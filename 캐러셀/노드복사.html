@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        안녕하세요
+    </div>
+    <h2>이 아래로 붙여넣기됩니다</h2>
+    <div class="붙여넣을곳">
+        <!-- 맨 앞에는 어떻게 추가할 수 있을까?-->
+
+        <!-- 기준점 -->
+        <hr>
+
+        <!-- appenChild로 추가하면 맨 뒤에 추가된다. -->
+    </div>
+    <script>
+        const box = document.querySelector('.box')
+        const 붙여넣을곳 = document.querySelector('.붙여넣을곳');
+
+        // 붙여넣을곳.appendChild(box); 원본 box가 움직이므로 잘못된 작성
+
+        // html 노드(요소) 를 복사하는 메서드 
+        const boxClone =  box.cloneNode(true);
+        
+        // html 노드(요소)의 자식으로 추가.
+        붙여넣을곳.appendChild(boxClone);
+        
+        
+        const boxClone2 =  box.cloneNode(true);
+        // html 노드(요소)의 자식으로 추가하되, 특정 자식 앞에 끼워넣음.
+        // 요소.insertBefore(끼워넣을것, 기준점)
+        붙여넣을곳.insertBefore(boxClone2,붙여넣을곳.firstElementChild);
+
+    </script>
+</body>
+</html>
