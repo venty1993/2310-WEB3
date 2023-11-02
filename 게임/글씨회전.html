@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #222;
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .test {
+            position: absolute;
+            
+            transform: translateY(240px) rotate(10deg) ;
+            transform-origin: 50% calc(50% - 240px);
+            
+            display: block;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+        <span class="test">하이하이</span>
+
+    </div>
+    <script src="글씨회전.js"></script>
+    <script>
+        // 위 test 개체를 30도씩 회전시키는 자바스크립트를 작성해주세요.
+        const testSpan = document.getElementsByClassName('test');
+        
+        for(let i = 0 ; i < testSpan.length; i ++) {
+            testSpan[i].style.transform = `translateY(240px) rotate(${ 30 * i }deg)`;
+        }
+    </script>
+</body>
+</html>

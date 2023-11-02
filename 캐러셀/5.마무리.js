@@ -10,28 +10,47 @@ const 애니메이션속도 = 1000
 
 let index = 1;
 
-슬라이드초기세팅();
+let moveAble = true;
 
+슬라이드초기세팅();
+// 이전버튼
 prevButton.addEventListener('click', ()=>{
-    index--;
-    위치적용(true);
-    if(index === 한번에보는슬라이드 - 1) {
+    if(moveAble){
+        moveAble = false;
+        index--;
+        위치적용(true);
         setTimeout(() => {
-            index = 슬라이드갯수 + 한번에보는슬라이드 - 1;
-            위치적용(false);
+
+            moveAble = true;
+
+            if(index === 한번에보는슬라이드 - 1) {
+                index = 슬라이드갯수 + 한번에보는슬라이드 - 1;
+                위치적용(false);
+            }
+
         }, 애니메이션속도);
     }
 })
 
+
+
 nextButton.addEventListener('click',()=>{
-    index++;
-    if(index > 슬라이드갯수+한번에보는슬라이드-1) {
+
+     if(moveAble){
+        moveAble = false;
+        index++;
+        위치적용(true);
         setTimeout(() => {
-            index = 한번에보는슬라이드;
-            위치적용(false);
+
+            moveAble = true;
+
+            if(index > 슬라이드갯수+한번에보는슬라이드-1) {
+                index = 한번에보는슬라이드;
+                위치적용(false);
+            }
+
         }, 애니메이션속도);
     }
-    위치적용(true);
 })
 
 function 위치적용(애니메이션여부) {

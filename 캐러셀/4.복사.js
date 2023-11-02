@@ -79,8 +79,10 @@ nextButton.addEventListener('click',()=>{
 })
 
 
+// 인덱스에 따라 슬라이드가 움직이게 만들고 true,false를 전달받아 애니메이션 실행 여부를 결정 할 수 있다.
 function 위치적용(애니메이션여부) {
 
+    // 사용자 기준 슬라이드 인덱스
     let 현재슬라이드 = index - 한번에보는슬라이드 + 1;
     console.log(현재슬라이드);
 
@@ -126,10 +128,11 @@ const 하단버튼 = document.querySelectorAll('.slider-radio-button')
 console.log(하단버튼[0]);
 
 
+
+// 버튼순서 에 해당하는 버튼에 색을 칠한다.
 function 버튼색변경(버튼순서) {
 
 
-    
     for(let i = 0 ; i < 하단버튼.length; i ++) {
         하단버튼[i].classList.remove('active');
     }
