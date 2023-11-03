@@ -36,25 +36,24 @@
 </head>
 <body>
     <div class="container">
+        <span class="test">20</span>
+        <span class="test">1</span>
+        <span class="test">5</span>
         <span class="test">하이하이</span>
         <span class="test">하이하이</span>
         <span class="test">하이하이</span>
         <span class="test">하이하이</span>
-        <span class="test">하이하이</span>
-        <span class="test">하이하이</span>
-        <span class="test">하이하이</span>
-        <span class="test">하이하이</span>
-        <span class="test">하이하이</span>
-        <span class="test">하이하이</span>
-
     </div>
     <script src="글씨회전.js"></script>
     <script>
         // 위 test 개체를 30도씩 회전시키는 자바스크립트를 작성해주세요.
         const testSpan = document.getElementsByClassName('test');
         
+
+        const thisDeg = 360/testSpan.length
+        
         for(let i = 0 ; i < testSpan.length; i ++) {
-            testSpan[i].style.transform = `translateY(240px) rotate(${ 30 * i }deg)`;
+            testSpan[i].style.transform = `translateY(240px) rotate(${ thisDeg * i }deg)`;
         }
     </script>
 </body>

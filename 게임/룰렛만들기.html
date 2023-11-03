@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid #222;
+
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .test {
+            position: absolute;
+            
+            transform: translateY(240px) rotate(10deg) ;
+            transform-origin: 50% calc(50% - 240px);
+            
+            display: block;
+            width: 100px;
+            height: 20px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <span class="test">20</span> -->
+        <!-- 위와 같은 모양을 자바스크립트에서 만들어서 넣을것임! -->
+    </div>
+    
+    <script>
+        const container = document.querySelector('.container');
+        const 룰렛판 = [20,1,2,4,7,2,4,1,2,7,4,2]
+
+        const thisDeg = 360/룰렛판.length
+
+
+        // 반복문을 이용해 span.test{20} 컨텐츠가 10개 들어가도록 해주세요
+        for(let i = 0 ; i< 룰렛판.length ; i++){
+            // <span class="test">20</span> 만드는 방법?
+
+            const spanTest = document.createElement('span');
+            // spanTest = <span></span>
+
+            spanTest.classList.add('test');
+            // spanTest = <span class="test"></span>
+
+            const innerText = document.createTextNode(`${룰렛판[i]}`)
+            //innerText = 20(텍스트 개체)
+
+            spanTest.appendChild(innerText);
+            // spanTest = <span class="test">20</span>
+            // 텍스트 노드를 만들어 원하는 개체에 자식으로 추가하면 된다.
+
+            console.log(spanTest)
+            // 출력값 : <span class="test">20</span>
+
+            container.appendChild(spanTest);
+            spanTest.style.transform = `translateY(240px) rotate(${ thisDeg * i }deg)`;
+        }
+
+    </script>
+</body>
+</html>
